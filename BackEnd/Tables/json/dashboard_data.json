@@ -1,0 +1,97 @@
+{
+    "raw_data": {
+        "London": [
+            5,
+            6,
+            9,
+            11,
+            15,
+            18,
+            20,
+            20,
+            17,
+            13,
+            9,
+            6
+        ],
+        "Paris": [
+            4,
+            5,
+            9,
+            12,
+            16,
+            19,
+            22,
+            22,
+            18,
+            14,
+            9,
+            6
+        ],
+        "Rome": [
+            8,
+            10,
+            13,
+            16,
+            20,
+            25,
+            28,
+            28,
+            24,
+            19,
+            14,
+            10
+        ]
+    },
+    "months": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+    ],
+    "statistics": {
+        "mean": {
+            "London": 12.42,
+            "Paris": 13.0,
+            "Rome": 17.92
+        },
+        "median": {
+            "London": 12.0,
+            "Paris": 13.0,
+            "Rome": 17.5
+        },
+        "std_dev": {
+            "London": 5.3,
+            "Paris": 6.19,
+            "Rome": 6.85
+        },
+        "skewness": {
+            "London": 0.09,
+            "Paris": 0.05,
+            "Rome": 0.15
+        }
+    },
+    "insights": {
+        "highest_average": {
+            "city": "Rome",
+            "value": 17.92
+        },
+        "most_consistent": {
+            "city": "London",
+            "value": 5.3
+        },
+        "normality_analysis": {
+            "London": "Approx. Normal",
+            "Paris": "Approx. Normal",
+            "Rome": "Approx. Normal"
+        }
+    }
+}
