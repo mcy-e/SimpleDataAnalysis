@@ -54,7 +54,7 @@ Four different visualizations were created to analyze the temperature data:
 
 #### 1. Line Chart – Monthly trends for all cities
 
-![Line Chart - Monthly Trends](d:\Simple-Data-Analysis-Project\BackEnd\Graphs\line_chart.png)
+![Line Chart - Monthly Trends](BackEnd/Graphs/line_chart.png)
 
 This line chart displays the monthly temperature trends for all three cities throughout the year. It clearly shows:
 - All cities follow a similar seasonal pattern with peak temperatures in July-August
@@ -63,7 +63,7 @@ This line chart displays the monthly temperature trends for all three cities thr
 
 #### 2. Box Plot – Compare distributions
 
-![Box Plot - Distribution Comparison](d:\Simple-Data-Analysis-Project\BackEnd\Graphs\box_plot.png)
+![Box Plot - Distribution Comparison](BackEnd/Graphs/box_plot.png)
 
 The box plot compares the temperature distributions across the three cities, showing:
 - Rome has the highest median temperature
@@ -72,7 +72,7 @@ The box plot compares the temperature distributions across the three cities, sho
 
 #### 3. Histogram – Frequency distribution for one city
 
-![Histogram - Paris Frequency Distribution](d:\Simple-Data-Analysis-Project\BackEnd\Graphs\histogram_paris.png)
+![Histogram - Paris Frequency Distribution](BackEnd/Graphs/histogram_paris.png)
 
 This histogram shows the frequency distribution of temperatures for Paris:
 - Temperatures are distributed across different ranges
@@ -81,7 +81,7 @@ This histogram shows the frequency distribution of temperatures for Paris:
 
 #### 4. Violin Plot – Density and distribution combined
 
-![Violin Plot - Density and Distribution](d:\Simple-Data-Analysis-Project\BackEnd\Graphs\violin_plot.png)
+![Violin Plot - Density and Distribution](BackEnd/Graphs/violin_plot.png)
 
 The violin plot combines density estimation with distribution visualization:
 - Shows the probability density of temperatures at different values
