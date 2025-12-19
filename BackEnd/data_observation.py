@@ -7,7 +7,7 @@ dt = dt.set_index('Unnamed: 0')
 
 #* Based on the relationship between mean, median, and mode, describe the skewness of each city's temperature distribution. 
 
-tolerance = 0.1
+tolerance = 0.9
 
 for city in dt.index:
     mean = dt.loc[city, 'Mean']

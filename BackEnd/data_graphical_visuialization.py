@@ -34,10 +34,10 @@ plt.show()
 #? 3. Histogram – Frequency distribution for one city
 
 '''
-    dt["London"].plot.hist(color='blue',edgecolor='black')
+    dt["Paris"].plot.hist(color='blue',edgecolor='black')
     plt.grid(True,alpha=0.3)
     plt.gca().set_axisbelow(True)
-    plt.title("Frequency distribution for one London ")
+    plt.title("Frequency distribution for Paris ")
     plt.ylabel("Frequency")
     plt.xlabel("Values range")
     plt.savefig("BackEnd/Graphs/Frequency_distribution_for_one_London.png")

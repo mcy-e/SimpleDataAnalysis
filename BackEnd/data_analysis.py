@@ -14,11 +14,10 @@ raw_data = {
 indexes=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 
 
-#* create a data frame
+#* Create a data frame
 data = pd.DataFrame(raw_data,index=indexes)
 
-#* to check the data
-# print(data.to_string())
+
 
 #? Calculating some Statistics vals
 
@@ -65,6 +64,7 @@ print(f"Third Quartile: {q3}\n")
 
 
 #& IQR 
+
 iqr={city:q3[city]-q1[city] for city in data}
 
 print(f"IQR: {iqr}\n")

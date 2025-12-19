@@ -135,8 +135,9 @@ raw_data = {
 
 indexes = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 
-# Create a DataFrame with custom index
+# Create a DataFrame 
 data = pd.DataFrame(raw_data, index=indexes)
+
 ```
 
 **Key Pandas Features Used:**
@@ -149,27 +150,42 @@ data = pd.DataFrame(raw_data, index=indexes)
 Pandas provides built-in methods for calculating descriptive statistics:
 
 ```python
-# Mean calculation
+
+# Mean
+ 
 mean = {city: float(data[city].mean().round(3)) for city in data}
 
-# Median calculation
+# Median 
+
 median = {city: float(data[city].median()) for city in data}
 
-# Mode calculation
+# Mode 
+
 mode = {city: list(data[city].mode()) for city in data}
 
-# Range calculation
+# Range 
+
 Range = {city: int(data[city].max() - data[city].min()) for city in data}
 
-# Variance calculation (population variance with ddof=0)
+# Variance (population variance with ddof=0)
+
 Variance = {city: float(data[city].var(ddof=0).round(3)) for city in data}
 
-# Standard deviation calculation (population std with ddof=0)
+# Standard deviation (population std with ddof=0)
+
 sd = {city: float(data[city].std(ddof=0).round(3)) for city in data}
 
-# Quartile calculations
+# Quartiles
+
 q1 = {city: float(data[city].quantile(0.25).round(3)) for city in data}
+
 q3 = {city: float(data[city].quantile(0.75).round(3)) for city in data}
+
+# IQR
+
+iqr={city:q3[city]-q1[city] for city in data}
+
+
 ```
 
 **Key Pandas Methods:**
@@ -211,11 +227,13 @@ stats_table = pd.DataFrame(stats, index=data.columns)
 Pandas was used to perform comparative analysis:
 
 ```python
+
 # Find city with highest average temperature
 city_highest_at = stats_table['Mean'].idxmax()
 
 # Find city with most consistent temperatures (lowest standard deviation)
 city_most_cons_temp = stats_table['Std'].idxmin()
+
 ```
 
 **Key Pandas Methods:**
@@ -227,11 +245,11 @@ city_most_cons_temp = stats_table['Std'].idxmin()
 The results were exported to both JSON and CSV formats:
 
 ```python
-# Export to JSON
+# Exported to JSON
 stats_table.to_json("BackEnd/Tables/json/stats_table.json")
 data.to_json("BackEnd/Tables/json/data_set.json")
 
-# Export to CSV
+# Exported to CSV
 stats_table.to_csv("BackEnd/Tables/csv/stats_table.csv")
 data.to_csv("BackEnd/Tables/csv/data_set.csv")
 ```
@@ -245,13 +263,16 @@ data.to_csv("BackEnd/Tables/csv/data_set.csv")
 Pandas was used to read the exported CSV files for visualization:
 
 ```python
-# Read CSV data for plotting
+
+# Read csv file for plotting
 dt = pd.read_csv("BackEnd/Tables/csv/data_set.csv")
 
-# Plot directly from DataFrame
+# Plot
+
 dt.plot.line()  # Line chart
 dt.plot.box()   # Box plot
-dt["London"].plot.hist()  # Histogram
+dt["Paris"].plot.hist()  # Histogram
+
 ```
 
 **Key Pandas Features:**
@@ -262,13 +283,16 @@ dt["London"].plot.hist()  # Histogram
 #### 7. Index Manipulation for Analysis
 
 ```python
-# Read CSV and set custom index
+# Read CSV file & set custom index
+
 dt = pd.read_csv("BackEnd/Tables/csv/stats_table.csv")
 dt = dt.set_index('Unnamed: 0')
 
 # Access data by index label
+
 mean = dt.loc[city, 'Mean']
 median = dt.loc[city, 'Median']
+
 ```
 
 **Key Pandas Methods:**
