@@ -311,5 +311,5 @@ The Pandas library provided:
 
 ---
 
-**Report Generated:** 2025-12-19  
+**Report Generated:** 19-12-2025  
 **Project:** Simple Data Analysis - City Temperature Variations
